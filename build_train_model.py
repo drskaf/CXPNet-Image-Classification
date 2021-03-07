@@ -158,6 +158,22 @@ plot_auc(valY, pred_Y)
 
 plot_precision_recall_curve(valY, pred_Y)
 
+# Create plot to show F1 Score vs Threshold
+from sklearn.metrics import f1_score
+from sklearn.preprocessing import binarize
+from numpy import argmax
+precision, recall, thresholds = precision_recall_curve(valY.astype(int), pred_Y)
+f1_scores = []
+for i in thresholds:
+    f1 = f1_score(valY.astype(int), binarize(pred_Y,i))
+    f1_scores.append(f1)
+    
+plt.plot(f1_scores,thresholds)
+plt.xlabel('Threshold')
+plt.ylabel('F1 Score')
+print('Best threshold: ', thresholds[np.argmax(f1_scores)])
+print('Best F1-Score: ', np.max(f1_scores))
+
 # Look at some examples
 fig, m_axs = plt.subplots(2, 2, figsize = (16, 16))
 i = 0
