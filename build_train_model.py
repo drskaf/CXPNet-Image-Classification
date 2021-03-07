@@ -126,7 +126,7 @@ val_gen = val_idg.flow_from_dataframe(dataframe=valid_df,
 valX, valY = val_gen.next()
 
 # Model checkpoints
-weight_path="{}_my_model.best.hdf5".format('#11_experiment')
+weight_path="{}_my_model.best.hdf5".format('#CPXNet')
 
 checkpoint = ModelCheckpoint(weight_path, 
                              monitor= 'val_loss', 
@@ -148,3 +148,36 @@ history = my_model.fit_generator(train_gen,
                           epochs = 50, 
                           callbacks = callbacks_list)
 
+# Evaluate model. NB: run evaluate_model.py script first to load the functions
+plot_history(history)
+
+my_model_4.load_weights(weight_path)
+pred_Y = my_model_4.predict(valX, batch_size = 32, verbose = True)
+
+plot_auc(valY, pred_Y)
+
+plot_precision_recall_curve(valY, pred_Y)
+
+# Look at some examples
+fig, m_axs = plt.subplots(2, 2, figsize = (16, 16))
+i = 0
+for (c_x, c_y, c_ax) in zip(valX[0:100], valY[0:100], m_axs.flatten()):
+    c_ax.imshow(c_x[:,:,0], cmap = 'bone')
+    if c_y == 1: 
+        if pred_Y[i] > 0.47:  
+            c_ax.set_title('1, 1')
+        else:
+            c_ax.set_title('1, 0')
+    else:
+        if pred_Y[i] > 0.47: 
+            c_ax.set_title('0, 1')
+        else:
+            c_ax.set_title('0, 0')
+    c_ax.axis('off')
+    i=i+1
+    
+# Just save model architecture to a .json:
+
+model_json = my_model.to_json()
+with open("my_model.json", "w") as json_file:
+    json_file.write(model_json)
