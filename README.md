@@ -6,9 +6,9 @@ Project Overview
 
 In this project, you will analyze data from the NIH Chest X-ray Dataset and train a CNN to classify a given chest x-ray for the presence or absence of pneumonia. This project will culminate in a model that can predict the presence of pneumonia with human radiologist-level accuracy that can be prepared for submission to the FDA for 510(k) clearance as software as a medical device. As part of the submission preparation, you will formally describe your model, the data that it was trained on, and a validation plan that meets FDA criteria.
 
-You will be provided with the medical images with clinical labels for each image that were extracted from their accompanying radiology reports.
+You can access the data from kaggle website at URL: https://www.kaggle.com/nih-chest-xrays/data. This contains the medical images with clinical labels for each image that were extracted from their accompanying radiology reports.
 
-The project will include access to a GPU for fast training of deep learning architecture, as well as access to 112,000 chest x-rays with disease labels acquired from 30,000 patients.
+You can access GPU for fast training of deep learning architecture for free (for limited time allowance) using colab reseach @Google.
 
 Pneumonia and X-Rays in the Wild
 
@@ -46,7 +46,7 @@ Mass
 Hernia
 The biggest limitation of this dataset is that image labels were NLP-extracted so there could be some erroneous labels but the NLP labeling accuracy is estimated to be >90%.
 
-The original radiology reports are not publicly available but you can find more details on the labeling process here.
+The original radiology reports are not publicly available but you can find more details on their respective website.
 
 Dataset Contents:
 
