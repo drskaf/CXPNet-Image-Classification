@@ -1,4 +1,4 @@
-# CXPNet
+# CXPNet Image Classification
 
 Pneumonia Detection from Chest X-Rays
 
