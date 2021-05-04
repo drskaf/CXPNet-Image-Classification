@@ -4,7 +4,7 @@ Pneumonia Detection from Chest X-Rays
 
 Project Overview
 
-In this project, you will analyze data from the NIH Chest X-ray Dataset and train a CNN to classify a given chest x-ray for the presence or absence of pneumonia. This project will culminate in a model that can predict the presence of pneumonia with human radiologist-level accuracy that can be prepared for submission to the FDA for 510(k) clearance as software as a medical device. As part of the submission preparation, you will formally describe your model, the data that it was trained on, and a validation plan that meets FDA criteria.
+In this project, you will analyze data from the NIH Chest X-ray Dataset and train a CNN to classify a given chest x-ray for the presence or absence of pneumonia. This project will culminate in a model that can predict the presence of pneumonia with human radiologist-level accuracy that can be prepared for submission to the FDA for 510(k) clearance as software as a medical device. 
 
 You can access the data from kaggle website at URL: https://www.kaggle.com/nih-chest-xrays/data. This contains the medical images with clinical labels for each image that were extracted from their accompanying radiology reports.
 
@@ -108,72 +108,6 @@ For this project, create a DICOM wrapper that takes in a standard DICOM file and
 
 Proper image acquisition type (i.e. X-ray)
 Proper image acquisition orientation (i.e. those present in your training data)
-Proper body part in acquisition
+Proper body part in acquisition.
 
-4. FDA Submission
-For this project, you will complete the following steps that are derived from the FDA's official guidance on both the algorithm description and the algorithm performance assessment. Much of this portion of the project relies on what you did during your EDA, model building, and model training. Use figures and statistics from those earlier parts in completing the following documentation.
 
-1. General Information:
-
-First, provide an Intended Use statement for your model
-Then, provide some indications for use that should include:
-Target population
-When your device could be utilized within a clinical workflow
-Device limitations, including diseases/conditions/abnormalities for which the device has been found ineffective and should not be used
-Explain how a false positive or false negative might impact a patient
-2. Algorithm Design and Function
-
-In this section, describe your fully trained algorithm and the DICOM header checks that you have built around it. Include a flowchart that describes the following:
-
-Any pre-algorithm checks you perform on your DICOM
-Any preprocessing steps performed by your algorithm on the original images (e.g. normalization)
-Note that this section should not include augmentation
-The architecture of the classifier
-For each stage of your algorithm, briefly describe the design and function.
-
-3. Algorithm Training
-
-Describe the following parameters of your algorithm and how they were chosen:
-
-Types of augmentation used during training
-Batch size
-Optimizer learning rate
-Layers of pre-existing architecture that were frozen
-Layers of pre-existing architecture that were fine-tuned
-Layers added to pre-existing architecture
-Also describe the behavior of the following throughout training (use visuals to show):
-
-Training loss
-Validation loss
-Describe the algorithm's final performance after training was complete by showing a precision-recall curve on your validation set.
-
-Finally, report the threshold for classification that you chose and the corresponded F1 score, recall, and precision. Give one or two sentences of explanation for why you chose this threshold value.
-
-4. Databases
-
-For the database of patient data used, provide specific information about the training and validation datasets that you curated separately, including:
-
-Size of the dataset
-The number of positive cases and the its radio to the number of negative cases
-The patient demographic data (as it is available)
-The radiologic techniques used and views taken
-The co-occurrence frequencies of pneumonia with other diseases and findings
-5. Ground Truth
-
-The methodology used to establish the ground truth can impact reported performance. Describe how the NIH created the ground truth for the data that was provided to you for this project. Describe the benefits and limitations of this type of ground truth.
-
-6. FDA Validation Plan
-
-You will simply describe how a FDA Validation Plan would be conducted for your algorithm, rather than actually performing the assessment. Describe the following:
-
-The patient population that you would request imaging data from from your clinical partner. Make sure to include:
-
-Age ranges
-Sex
-Type of imaging modality
-Body part imaged
-Prevalence of disease of interest
-Any other diseases that should be included or excluded as comorbidities in the population
-Provide a short explanation of how you would obtain an optimal ground truth
-
-Provide a performance standard that you choose based on this paper.
