@@ -2,7 +2,7 @@
 
 Pneumonia Detection from Chest X-Rays
 
-Project Overview
+# Project Overview
 
 In this project, you will analyze data from the NIH Chest X-ray Dataset and train a CNN to classify a given chest x-ray for the presence or absence of pneumonia. This project will culminate in a model that can predict the presence of pneumonia with human radiologist-level accuracy that can be prepared for submission to the FDA for 510(k) clearance as software as a medical device. 
 
@@ -10,7 +10,7 @@ You can access the data from kaggle website at URL: https://www.kaggle.com/nih-c
 
 You can access GPU for fast training of deep learning architecture for free (for limited time allowance) using colab reseach @Google.
 
-Pneumonia and X-Rays in the Wild
+# Pneumonia and X-Rays in the Wild
 
 Chest X-ray exams are one of the most frequent and cost-effective types of medical imaging examinations. Deriving clinical diagnoses from chest X-rays can be challenging, however, even by skilled radiologists.
 
@@ -24,7 +24,7 @@ Pneumonia can mimic benign abnormalities
 
 For these reasons, common methods of diagnostic validation performed in the clinical setting are to obtain sputum cultures to test for the presence of bacteria or viral bodies that cause pneumonia, reading the patient's clinical history and taking their demographic profile into account, and comparing a current image to prior chest X-rays for the same patient if they are available.
 
-About the Dataset
+A# bout the Dataset
 
 You can download the data from the kaggle website and run it locally.
 
@@ -48,12 +48,12 @@ The biggest limitation of this dataset is that image labels were NLP-extracted s
 
 The original radiology reports are not publicly available but you can find more details on their respective website.
 
-Dataset Contents:
+# Dataset Contents:
 
 112,120 frontal-view chest X-ray PNG images in 1024*1024 resolution (under images folder)
 Meta data for all images (Data_Entry_2017.csv): Image Index, Finding Labels, Follow-up #, Patient ID, Patient Age, Patient Gender, View Position, Original Image Size and Original Image Pixel Spacing.
 
-Project Steps
+# Project Steps
 
 1. Exploratory Data Analysis
 The first part of this project will involve exploratory data analysis (EDA) to understand and describe the content and nature of the data.
