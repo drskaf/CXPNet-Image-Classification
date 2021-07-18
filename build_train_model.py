@@ -196,4 +196,4 @@ for (c_x, c_y, c_ax) in zip(valX[0:100], valY[0:100], m_axs.flatten()):
 
 model_json = my_model.to_json()
 with open("my_model.json", "w") as json_file:
-    json_file.write(model_json)
+    json_file.write(model_json)   
