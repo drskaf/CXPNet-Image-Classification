@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from skimage.io import imread, imshow
 from itertools import chain
-from random import sample
+from random import sample   
 
 # Load NIH data
 all_xray_df = pd.read_csv('/data/Data_Entry_2017.csv') #provide path to where images saved
