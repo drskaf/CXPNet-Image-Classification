@@ -10,7 +10,7 @@ from itertools import chain
 from random import sample
 from keras.preprocessing.image import ImageDataGenerator
 
-# Load data
+# Load data   
 all_xray_df = pd.read_csv('/data/Data_Entry_2017.csv')
 all_image_paths = {os.path.basename(x): x for x in 
                    glob(os.path.join('/data','images*', '*', '*.png'))}
@@ -75,7 +75,7 @@ for layer in vgg_model.layers:
     print(layer.name, layer.trainable)
     
 # Fine tuning
-my_model = Sequential()
+my_model = Sequential()  
 my_model.add(vgg_model)
 my_model.add(Flatten())
 my_model.add(Dropout(0.5))
