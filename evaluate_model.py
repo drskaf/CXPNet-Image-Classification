@@ -11,7 +11,7 @@ def plot_auc(t_y, p_y):
     c_ax.set_xlabel('False Positive Rate')
     c_ax.set_ylabel('True Positive Rate')
     
-def plot_precision_recall_curve(t_y, p_y):
+def plot_precision_recall_curve(t_y, p_y):   
     
 
     fig, c_ax = plt.subplots(1,1, figsize = (9, 9))
@@ -37,5 +37,5 @@ def plot_history(history):
     plt.title("Training Loss and Accuracy on Dataset")
     plt.xlabel("Epoch #")
     plt.ylabel("Loss/Accuracy")
-    plt.legend(loc="lower left")
+    plt.legend(loc="lower left")   
     
