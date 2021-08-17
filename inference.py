@@ -12,7 +12,7 @@ test_dicoms = ['test1.dcm','test2.dcm','test3.dcm','test4.dcm','test5.dcm','test
 dcm = pydicom.dcmread(test_dicoms[0])
 dcm
 
-# Define functions
+# Define functions      
 def check_dicom(filename): 
     
     
@@ -64,7 +64,7 @@ for i in test_dicoms:
     if img is None:
         continue
     
-    img_mean = np.mean(img)
+    img_mean = np.mean(img)    
     img_std = np.std(img)   
            
     img_proc = preprocess_image(img,img_mean, img_std,IMG_SIZE)
