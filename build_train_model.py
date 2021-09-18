@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import sklearn.model_selection as skl
 from skimage.io import imread, imshow
 from itertools import chain
-from random import sample
+from random import sample    
 from keras.preprocessing.image import ImageDataGenerator
 
 # Load data   
@@ -138,7 +138,7 @@ checkpoint = ModelCheckpoint(weight_path,
 early = EarlyStopping(monitor= 'val_loss', 
                       mode= 'min', 
                       patience=10)
-
+  
 callbacks_list = [checkpoint, early]
 
 # Train model
