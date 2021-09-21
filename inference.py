@@ -13,7 +13,7 @@ dcm = pydicom.dcmread(test_dicoms[0])
 dcm
 
 # Define functions      
-def check_dicom(filename):      
+def check_dicom(filename):          
     
     
     print('Load file {} ...'.format(filename))
