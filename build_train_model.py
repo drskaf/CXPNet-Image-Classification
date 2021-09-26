@@ -62,7 +62,7 @@ from keras.applications.resnet import ResNet50
 from keras.optimizers import Adam, SGD
 from keras.callbacks import ModelCheckpoint, LearningRateScheduler, EarlyStopping, ReduceLROnPlateau
 
-# Import VGG16 and freeze 17 layers
+# Import VGG16 and freeze 17 layers     
 model = VGG16(include_top=True, weights='imagenet')
 
 transfer_layer = model.get_layer('block5_pool')
