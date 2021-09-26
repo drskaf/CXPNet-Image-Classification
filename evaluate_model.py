@@ -23,7 +23,7 @@ def plot_precision_recall_curve(t_y, p_y):
     
 def calc_f1(prec,recall):
     return 2*(prec*recall)/(prec+recall)
-  
+       
 def plot_history(history):
     
     
