@@ -69,5 +69,5 @@ for i in test_dicoms:
            
     img_proc = preprocess_image(img,img_mean, img_std,IMG_SIZE)
     pred = predict_image(my_model_4, img_proc, thresh)
-    print(pred)
+    print(pred)   
        
