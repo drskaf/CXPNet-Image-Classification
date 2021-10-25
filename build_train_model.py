@@ -191,7 +191,7 @@ for (c_x, c_y, c_ax) in zip(valX[0:100], valY[0:100], m_axs.flatten()):
             c_ax.set_title('0, 0')
     c_ax.axis('off')
     i=i+1
-    
+         
 # Just save model architecture to a .json:
 
 model_json = my_model.to_json()
