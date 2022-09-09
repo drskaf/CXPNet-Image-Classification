@@ -40,7 +40,7 @@ valid_df['Pneumonia'].sum()/len(valid_df)
 
 p_inds = train_df[train_df.Pneumonia==1].index.tolist()
 np_inds = train_df[train_df.Pneumonia==0].index.tolist()
-p_sample = sample(np_inds,len(p_inds))
+np_sample = sample(np_inds,len(p_inds))
 train_df = train_df.loc[p_inds + np_sample]
 train_df['Pneumonia'].sum()/len(train_df)
 
